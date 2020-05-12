@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2019.css">
+    <title>Exercice 1</title>
+</head>
+
+<body class="w3-row">
+    <div class="w3-card-4 w3-col m4 w3-display-topmiddle">
+
+        <header class="w3-container w3-2019-galaxy-blue">
+            <h1>Exercice 1 :</h1>
+            <p>
+                A l'aide de la librairie <b>cleave.js</b>, créer un formulaire de paiement. Ajouter un champ <b>nom</b>
+                et un champ <b>prénom</b>, un champ <b>numéro de téléphone</b>, un champ <b>date de commande</b> et un
+                champ <b>carte bancaire</b>.
+            </p>
+        </header>
+
+        <form id="formPayement" class="w3-container">
+            <label for="fName">Entrez votre prénom :</label>
+            <input id="fName" name="fName" class="w3-input w3-animate-input" type="text" style="width:60%"
+                placeholder="John" required="true" minlength="2" maxlength="50">
+
+            <label for="sName">Entrez votre nom :</label>
+            <input id="sName" name="sName" class="w3-input w3-animate-input" type="text" style="width:60%"
+                placeholder="Doe" required="true" minlength="2" maxlength="50">
+
+
+
+            <label for="tel">Entrez votre numéro de téléphone :</label>
+            <select class="select-country"></select>
+            <input id="tel" name="tel" class="input-phone w3-input w3-animate-input" type="tel" style="width:60%"
+                required="true" placeholder="Enter phone number" />
+
+
+            <label for="dateCommande">Date de votre commande :</label>
+            <input id="dateCommande" name="dateCommande" class="dateCommande w3-input w3-animate-input"
+                style="width:60%" placeholder="jj/mm/aaaa" required="true">
+
+            <label for="creditCard">Votre numéro de carte banquaire (<span class="type">unknown</span>):</label>
+            <input id="creditCard" name="creditCard" class="creditCard w3-input w3-animate-input" type="tel"
+                style="width:60%" placeholder="" required="true">
+            <div class="w3-center">
+
+                <button id="runEx" class="w3-btn w3-2019-galaxy-blue w3-margin" type="button">Confirmer votre
+                    paiement</button>
+                <div id="divAlert" class="w3-panel w3-pale-yellow w3-display-container">
+                    <span onclick="this.parentElement.style.display='none'"
+                        class="w3-button w3-circle w3-large w3-display-topright">&times;</span>
+                    <h3>Attention !</h3>
+                    <p>Tous les champs doivent être remplis avec des données valides !</p>
+                </div>
+            </div>
+        </form>
+        <footer class="w3-container w3-2019-galaxy-blue">
+            <h2>Result :</h2>
+            <div id="myResult" class="w3-container w3-white w3-margin-bottom"></div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.5.10/cleave.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.5.10/addons/cleave-phone.i18n.js"></script>
+    <script src="assets/js/myScript.js"></script>
+</body>
+
+</html>
